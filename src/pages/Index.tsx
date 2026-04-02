@@ -6,6 +6,7 @@ import { FeatureGrid } from "@/components/blocks/FeatureGrid";
 import { ProcessSteps } from "@/components/blocks/ProcessSteps";
 import { FAQSection } from "@/components/blocks/FAQSection";
 import { CTABlock } from "@/components/blocks/CTABlock";
+import { ImageStorySection } from "@/components/blocks/ImageStorySection";
 import { Brain, Shield, Timer, Trophy, Compass, Target, Users } from "lucide-react";
 
 const programs = [
@@ -87,6 +88,8 @@ export default function Home() {
         description="From U4 to U15, we develop confident players through structured coaching, meaningful competition, and a clear pathway from training to match performance."
         primaryCta={{ label: "Register Interest", href: "/contact" }}
         secondaryCta={{ label: "View Programs", href: "/services" }}
+        imageUrl="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?auto=format&fit=crop&w=1800&q=80"
+        imageAlt="Youth football players and coach during a focused field session"
       />
 
       <TrustStrip
@@ -114,6 +117,14 @@ export default function Home() {
         features={pillars}
         columns={4}
         variant="muted"
+      />
+
+      <ImageStorySection
+        eyebrow="The Coaching Environment"
+        heading="High standards, without the pressure that burns kids out."
+        description="We create a setting where players feel challenged and supported at the same time. Sessions are demanding, communication is clear, and every player knows what they need to improve next."
+        imageUrl="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1400&q=80"
+        imageAlt="Youth football team listening to coaching instructions together"
       />
 
       <ProcessSteps

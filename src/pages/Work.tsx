@@ -5,6 +5,7 @@ import { FAQSection } from "@/components/blocks/FAQSection";
 import { CTABlock } from "@/components/blocks/CTABlock";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/blocks/SectionHeading";
+import { ImageStorySection } from "@/components/blocks/ImageStorySection";
 import { MapPin } from "lucide-react";
 
 const competitionPathway = [
@@ -56,6 +57,8 @@ export default function Work() {
         eyebrow="Matches & Travel"
         heading="A clear route from training sessions to competitive football."
         description="Kix Academy gives parents a transparent progression model: train with structure, compete locally, and pursue travel opportunities when players are ready."
+        imageUrl="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=1800&q=80"
+        imageAlt="Youth football match with players sprinting for the ball"
       />
 
       <Section variant="muted">
@@ -85,6 +88,14 @@ export default function Work() {
         heading="How progression decisions are made."
         description="We keep criteria transparent so families understand every step."
         steps={competitionPathway}
+      />
+
+      <ImageStorySection
+        eyebrow="Travel Team Mindset"
+        heading="Players earn higher opportunities through consistency."
+        description="Readiness is never guesswork. We evaluate training quality, mentality, and match behavior over time so families have a fair, transparent view of when a player is ready for more."
+        imageUrl="https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=1400&q=80"
+        imageAlt="Focused youth football players before kickoff"
       />
 
       <FAQSection
