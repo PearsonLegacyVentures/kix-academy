@@ -4,28 +4,29 @@
  */
 
 export const siteConfig = {
-  name: "Studio",
-  tagline: "Strategy. Design. Results.",
-  description: "We help ambitious brands create exceptional digital experiences that drive growth and build lasting value.",
+  name: "Kix Academy",
+  tagline: "Disciplined coaching. Confident players.",
+  description:
+    "Kix Academy helps Nassau families develop confident, disciplined youth football players through structured coaching from U4 to U15.",
   url: "https://example.com",
   ogImage: "/og-image.jpg",
   nav: [
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Work", href: "/work" },
+    { label: "Academy", href: "/about" },
+    { label: "Programs", href: "/services" },
+    { label: "Matches & Travel", href: "/work" },
     { label: "Contact", href: "/contact" },
   ],
   footer: {
     company: [
-      { label: "About", href: "/about" },
-      { label: "Services", href: "/services" },
-      { label: "Work", href: "/work" },
+      { label: "Academy", href: "/about" },
+      { label: "Programs", href: "/services" },
+      { label: "Matches & Travel", href: "/work" },
       { label: "Contact", href: "/contact" },
     ],
     resources: [
-      { label: "Blog", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Press", href: "#" },
+      { label: "Parent FAQ", href: "/contact" },
+      { label: "Registration", href: "/contact" },
+      { label: "Training Locations", href: "/work" },
     ],
     legal: [
       { label: "Privacy", href: "#" },

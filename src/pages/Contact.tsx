@@ -6,14 +6,14 @@ export default function Contact() {
   return (
     <PageLayout>
       <HeroSection
-        eyebrow="Contact"
-        heading="Let's start a conversation."
-        description="Whether you have a project in mind or just want to explore possibilities, we'd love to hear from you."
+        eyebrow="Contact & Registration"
+        heading="Tell us about your child and we’ll guide you to the right program."
+        description="Share age group, experience, and preferred location. Our team will follow up with the best next step for your family."
       />
 
       <ContactForm
-        heading="Get in touch."
-        description="Fill out the form below and we'll get back to you within one business day."
+        heading="Start your registration enquiry."
+        description="We’ll reply with program fit, session options, and next steps."
       />
     </PageLayout>
   );

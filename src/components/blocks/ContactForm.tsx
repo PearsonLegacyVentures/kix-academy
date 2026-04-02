@@ -19,15 +19,20 @@ export function ContactForm({ eyebrow, heading, description }: ContactFormProps)
           <div className="space-y-6">
             <div>
               <h4 className="text-sm font-semibold mb-1">Email</h4>
-              <p className="text-sm text-muted-foreground">hello@example.com</p>
+              <p className="text-sm text-muted-foreground">hello@kixacademy.com</p>
             </div>
             <div>
               <h4 className="text-sm font-semibold mb-1">Phone</h4>
-              <p className="text-sm text-muted-foreground">+1 (555) 000-0000</p>
+              <p className="text-sm text-muted-foreground">+1 (242) 000-0000</p>
             </div>
             <div>
-              <h4 className="text-sm font-semibold mb-1">Office</h4>
-              <p className="text-sm text-muted-foreground">123 Main Street, Suite 100<br />New York, NY 10001</p>
+              <h4 className="text-sm font-semibold mb-1">Training Locations</h4>
+              <p className="text-sm text-muted-foreground">NSA Field and Winton Rugby Center, Nassau, Bahamas</p>
+            </div>
+            <div className="rounded-lg border border-border bg-muted/40 p-4">
+              <p className="text-sm text-muted-foreground">
+                Please include your child&apos;s age and playing experience so we can recommend the most suitable group quickly.
+              </p>
             </div>
           </div>
         </div>
@@ -35,27 +40,43 @@ export function ContactForm({ eyebrow, heading, description }: ContactFormProps)
         <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
-              <label htmlFor="firstName" className="text-sm font-medium mb-1.5 block">First name</label>
-              <Input id="firstName" placeholder="Jane" />
+              <label htmlFor="parentName" className="text-sm font-medium mb-1.5 block">Parent/Guardian name</label>
+              <Input id="parentName" placeholder="Alicia Rolle" />
             </div>
             <div>
-              <label htmlFor="lastName" className="text-sm font-medium mb-1.5 block">Last name</label>
-              <Input id="lastName" placeholder="Smith" />
+              <label htmlFor="childName" className="text-sm font-medium mb-1.5 block">Child name</label>
+              <Input id="childName" placeholder="Kai Rolle" />
+            </div>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label htmlFor="email" className="text-sm font-medium mb-1.5 block">Email</label>
+              <Input id="email" type="email" placeholder="parent@email.com" />
+            </div>
+            <div>
+              <label htmlFor="phone" className="text-sm font-medium mb-1.5 block">Phone</label>
+              <Input id="phone" placeholder="+1 (242) ..." />
+            </div>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label htmlFor="ageGroup" className="text-sm font-medium mb-1.5 block">Age group</label>
+              <Input id="ageGroup" placeholder="U7, U10, U13..." />
+            </div>
+            <div>
+              <label htmlFor="location" className="text-sm font-medium mb-1.5 block">Preferred location</label>
+              <Input id="location" placeholder="NSA Field or Winton Rugby Center" />
             </div>
           </div>
           <div>
-            <label htmlFor="email" className="text-sm font-medium mb-1.5 block">Email</label>
-            <Input id="email" type="email" placeholder="jane@example.com" />
+            <label htmlFor="experience" className="text-sm font-medium mb-1.5 block">Playing experience</label>
+            <Input id="experience" placeholder="New to football / 2 years club / school team..." />
           </div>
           <div>
-            <label htmlFor="company" className="text-sm font-medium mb-1.5 block">Company</label>
-            <Input id="company" placeholder="Acme Inc." />
+            <label htmlFor="message" className="text-sm font-medium mb-1.5 block">Anything we should know?</label>
+            <Textarea id="message" placeholder="Share goals, schedule constraints, or questions..." rows={5} />
           </div>
-          <div>
-            <label htmlFor="message" className="text-sm font-medium mb-1.5 block">Message</label>
-            <Textarea id="message" placeholder="Tell us about your project..." rows={5} />
-          </div>
-          <Button variant="hero" type="submit" className="w-full sm:w-auto">Send Message</Button>
+          <Button variant="hero" type="submit" className="w-full sm:w-auto">Submit Registration Enquiry</Button>
         </form>
       </div>
     </Section>

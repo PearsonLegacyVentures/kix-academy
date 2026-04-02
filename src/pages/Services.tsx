@@ -4,53 +4,61 @@ import { ServiceCardGrid } from "@/components/blocks/ServiceCardGrid";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/blocks/SectionHeading";
 import { CTABlock } from "@/components/blocks/CTABlock";
-import { Layers, Palette, Zap, BarChart3, Globe, Megaphone } from "lucide-react";
-import { Check } from "lucide-react";
+import { Baby, Footprints, Trophy, Check } from "lucide-react";
 
-const services = [
-  { icon: Layers, title: "Strategy & Research", description: "Market analysis, competitive audits, user research, and strategic roadmaps that set the foundation for everything we build." },
-  { icon: Palette, title: "Brand & Identity", description: "Visual identity systems, brand guidelines, and messaging frameworks that position your business for growth." },
-  { icon: Zap, title: "Web Design & Development", description: "Custom websites and web applications built with modern technologies, optimized for performance and conversion." },
-  { icon: BarChart3, title: "Analytics & Optimization", description: "Data-driven insights, A/B testing, and continuous optimization to improve performance over time." },
-  { icon: Globe, title: "Digital Transformation", description: "End-to-end digital strategy and implementation for organizations ready to modernize their operations." },
-  { icon: Megaphone, title: "Content & Marketing", description: "Content strategy, copywriting, and marketing support that connects your brand with the right audience." },
+const programs = [
+  {
+    icon: Baby,
+    title: "U4–U6 Foundation",
+    description: "Ball familiarity, coordination, and confidence in a structured, age-appropriate environment.",
+  },
+  {
+    icon: Footprints,
+    title: "U7–U10 Development",
+    description: "Technical repetition, game understanding, and consistency habits that build smarter players.",
+  },
+  {
+    icon: Trophy,
+    title: "U11–U15 Competitive Pathway",
+    description: "Higher standards in training and match preparation for players targeting serious competition.",
+  },
 ];
 
-const comparisonFeatures = [
-  "Dedicated senior team",
-  "Strategic discovery phase",
-  "Custom design (no templates)",
-  "Performance optimization",
-  "Ongoing support & iteration",
-  "Transparent pricing",
+const parentFitChecks = [
+  "Age-appropriate coaching plans",
+  "Clear standards and session structure",
+  "Local match pathway for applied learning",
+  "Travel-team opportunities for ready players",
+  "Direct parent communication on progression",
+  "Training at NSA Field and Winton Rugby Center",
 ];
 
 export default function Services() {
   return (
     <PageLayout>
       <HeroSection
-        eyebrow="Services"
-        heading="Everything you need, nothing you don't."
-        description="We offer a focused set of services designed to help ambitious brands grow through better digital experiences."
-        primaryCta={{ label: "Discuss Your Project", href: "/contact" }}
+        eyebrow="Programs"
+        heading="Training tracks designed for U4–U15 progression."
+        description="Each program has clear priorities, coaching standards, and competition expectations so parents can choose confidently."
+        primaryCta={{ label: "Start Registration", href: "/contact" }}
       />
 
       <ServiceCardGrid
-        eyebrow="Capabilities"
-        heading="Services built around your goals."
-        description="Each engagement is tailored to your specific needs. Here's what we bring to the table."
-        services={services}
+        eyebrow="Age Groups"
+        heading="Choose the right starting point."
+        description="We place players by age and readiness, then coach toward steady progression."
+        services={programs}
       />
 
       <Section variant="muted">
         <SectionHeading
-          eyebrow="The Difference"
-          heading="Why clients choose us."
-          description="Working with us means working with a team that's invested in your success — not just your project."
+          eyebrow="Parent Checklist"
+          heading="How to know this is the right fit."
+          description="If these priorities matter to your family, Kix Academy is likely a strong match."
         />
         <div className="mx-auto max-w-2xl">
           <div className="space-y-4">
-            {comparisonFeatures.map((feature) => (
+            {parentFitChecks.map((feature) => (
               <div key={feature} className="flex items-center gap-3 rounded-lg bg-card border border-border p-4">
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-accent/20 flex items-center justify-center">
                   <Check className="h-3.5 w-3.5 text-accent" />
@@ -63,10 +71,10 @@ export default function Services() {
       </Section>
 
       <CTABlock
-        heading="Let's build something remarkable."
-        description="Every great project starts with a conversation. Tell us about yours."
-        primaryCta={{ label: "Get in Touch", href: "/contact" }}
-        secondaryCta={{ label: "View Our Work", href: "/work" }}
+        heading="Need help choosing an age group?"
+        description="Tell us your child’s age and football experience. We’ll recommend the right program path."
+        primaryCta={{ label: "Register Interest", href: "/contact" }}
+        secondaryCta={{ label: "View Match Pathway", href: "/work" }}
         variant="dark"
       />
     </PageLayout>
