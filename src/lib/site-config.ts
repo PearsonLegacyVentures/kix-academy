@@ -12,6 +12,7 @@ export const siteConfig = {
   ogImage: "/og-image.jpg",
   nav: [
     { label: "Academy", href: "/about" },
+    { label: "Founders", href: "/founders" },
     { label: "Programs", href: "/services" },
     { label: "Matches & Travel", href: "/work" },
     { label: "Contact", href: "/contact" },
@@ -19,6 +20,7 @@ export const siteConfig = {
   footer: {
     company: [
       { label: "Academy", href: "/about" },
+      { label: "Founders", href: "/founders" },
       { label: "Programs", href: "/services" },
       { label: "Matches & Travel", href: "/work" },
       { label: "Contact", href: "/contact" },
@@ -27,6 +29,7 @@ export const siteConfig = {
       { label: "Parent FAQ", href: "/contact" },
       { label: "Registration", href: "/contact" },
       { label: "Training Locations", href: "/work" },
+      { label: "Founding Team", href: "/founders" },
     ],
     legal: [
       { label: "Privacy", href: "#" },

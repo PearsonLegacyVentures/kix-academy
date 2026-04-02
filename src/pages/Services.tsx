@@ -4,6 +4,7 @@ import { ServiceCardGrid } from "@/components/blocks/ServiceCardGrid";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/blocks/SectionHeading";
 import { CTABlock } from "@/components/blocks/CTABlock";
+import { ImageStorySection } from "@/components/blocks/ImageStorySection";
 import { Baby, Footprints, Trophy, Check } from "lucide-react";
 
 const programs = [
@@ -41,6 +42,8 @@ export default function Services() {
         heading="Training tracks designed for U4–U15 progression."
         description="Each program has clear priorities, coaching standards, and competition expectations so parents can choose confidently."
         primaryCta={{ label: "Start Registration", href: "/contact" }}
+        imageUrl="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1800&q=80"
+        imageAlt="Young football players in a structured training drill"
       />
 
       <ServiceCardGrid
@@ -48,6 +51,15 @@ export default function Services() {
         heading="Choose the right starting point."
         description="We place players by age and readiness, then coach toward steady progression."
         services={programs}
+      />
+
+      <ImageStorySection
+        eyebrow="Built for Real Progress"
+        heading="Every age group has clear priorities and measurable standards."
+        description="We don’t run generic sessions. Each stage is designed around what players should master next, so parents understand what development really looks like month to month."
+        imageUrl="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1400&q=80"
+        imageAlt="Football coach guiding a group of children on the pitch"
+        imageOnLeft
       />
 
       <Section variant="muted">

@@ -4,6 +4,7 @@ import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/blocks/SectionHeading";
 import { StatsRow } from "@/components/blocks/StatsRow";
 import { CTABlock } from "@/components/blocks/CTABlock";
+import { ImageStorySection } from "@/components/blocks/ImageStorySection";
 import { ClipboardCheck, HeartHandshake, Goal, MessageSquareHeart } from "lucide-react";
 
 const standards = [
@@ -48,21 +49,17 @@ export default function About() {
         heading="A disciplined coaching culture built for long-term growth."
         description="Kix Academy is built around structure, accountability, and confidence. We help players improve with purpose while giving parents a clear, trusted development path."
         variant="centered"
+        imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1800&q=80"
+        imageAlt="Coach preparing youth athletes before a football training session"
       />
 
-      <Section>
-        <div className="mx-auto max-w-3xl">
-          <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-            Families choose Kix Academy because the environment is serious, positive, and clear. Players are challenged at the right level and coached with consistent standards.
-          </p>
-          <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-            We focus on how players train, think, compete, and carry themselves. That means technical detail, game understanding, and character are developed together.
-          </p>
-          <p className="text-lg leading-relaxed text-muted-foreground">
-            Our role is simple: help each player become more confident, more disciplined, and more prepared for the demands of higher competition.
-          </p>
-        </div>
-      </Section>
+      <ImageStorySection
+        eyebrow="Why Families Stay"
+        heading="A serious football academy with a human coaching style."
+        description="Families choose Kix Academy because the environment is demanding, positive, and consistent. We coach technical detail, game intelligence, and character together so progress is visible on and off the pitch."
+        imageUrl="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1400&q=80"
+        imageAlt="Youth player working on football control drills"
+      />
 
       <StatsRow stats={framework} />
 
@@ -86,9 +83,10 @@ export default function About() {
       </Section>
 
       <CTABlock
-        heading="Want to see where your child fits?"
-        description="Share your child’s age and experience. We’ll guide you to the most suitable training group."
-        primaryCta={{ label: "Register Interest", href: "/contact" }}
+        heading="Meet the people leading the academy."
+        description="See the standards and values our founders bring to every training cycle."
+        primaryCta={{ label: "View Founders", href: "/founders" }}
+        secondaryCta={{ label: "Register Interest", href: "/contact" }}
       />
     </PageLayout>
   );
