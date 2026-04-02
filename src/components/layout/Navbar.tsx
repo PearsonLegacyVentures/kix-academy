@@ -15,7 +15,6 @@ export function Navbar() {
           {siteConfig.name}
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {siteConfig.nav.map((item) => (
             <Link
@@ -29,11 +28,10 @@ export function Navbar() {
             </Link>
           ))}
           <Button variant="default" size="sm" asChild>
-            <Link to="/contact">Get in Touch</Link>
+            <Link to="/contact">Register Interest</Link>
           </Button>
         </nav>
 
-        {/* Mobile toggle */}
         <button
           className="md:hidden p-2 text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -43,7 +41,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile nav */}
       {mobileOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <nav className="content-container flex flex-col gap-4 py-6">
@@ -60,7 +57,7 @@ export function Navbar() {
               </Link>
             ))}
             <Button variant="default" className="w-full mt-2" asChild>
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get in Touch</Link>
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>Register Interest</Link>
             </Button>
           </nav>
         </div>

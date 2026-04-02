@@ -3,114 +3,138 @@ import { HeroSection } from "@/components/blocks/HeroSection";
 import { TrustStrip } from "@/components/blocks/TrustStrip";
 import { ServiceCardGrid } from "@/components/blocks/ServiceCardGrid";
 import { FeatureGrid } from "@/components/blocks/FeatureGrid";
-import { CaseStudyGrid } from "@/components/blocks/CaseStudyGrid";
 import { ProcessSteps } from "@/components/blocks/ProcessSteps";
-import { TestimonialSection } from "@/components/blocks/TestimonialSection";
 import { FAQSection } from "@/components/blocks/FAQSection";
 import { CTABlock } from "@/components/blocks/CTABlock";
-import { Layers, Target, Zap, Shield, BarChart3, Palette } from "lucide-react";
+import { Brain, Shield, Timer, Trophy, Compass, Target, Users } from "lucide-react";
 
-const services = [
-  { icon: Layers, title: "Strategy & Consulting", description: "We align business objectives with clear digital strategies that drive measurable outcomes." },
-  { icon: Palette, title: "Design & Experience", description: "Crafting interfaces that balance beauty with usability, rooted in user research and brand identity." },
-  { icon: Zap, title: "Development & Engineering", description: "Building scalable, performant digital products with modern technologies and clean architecture." },
+const programs = [
+  {
+    icon: Target,
+    title: "U4–U6 Foundation",
+    description: "Early ball confidence, movement basics, and positive team habits introduced through structured sessions.",
+    href: "/services",
+  },
+  {
+    icon: Users,
+    title: "U7–U10 Development",
+    description: "Technical quality, decision-making, and game understanding built through disciplined repetition.",
+    href: "/services",
+  },
+  {
+    icon: Trophy,
+    title: "U11–U15 Competitive Pathway",
+    description: "Higher standards, match readiness, and progression toward local competition and travel-team opportunities.",
+    href: "/services",
+  },
 ];
 
-const features = [
-  { icon: Target, title: "Outcome-Focused", description: "Every engagement starts with your goals. We measure success by the results that matter to your business." },
-  { icon: Shield, title: "Built to Last", description: "We create systems and products designed for longevity — not quick fixes that need replacing in six months." },
-  { icon: BarChart3, title: "Data-Informed", description: "Decisions backed by research, analytics, and user insights. Not guesswork, not trends — evidence." },
-  { icon: Layers, title: "Full-Service", description: "Strategy, design, development, and support under one roof. No handoffs, no miscommunication." },
+const pillars = [
+  { icon: Brain, title: "Game Intelligence", description: "Players learn to read situations early and make smarter choices under pressure." },
+  { icon: Shield, title: "Discipline & Standards", description: "Clear expectations create structure, accountability, and consistent progress." },
+  { icon: Timer, title: "Age-Appropriate Progression", description: "Sessions are built for each stage of development, not one-size-fits-all drills." },
+  { icon: Compass, title: "Confidence Under Pressure", description: "Players are coached to stay composed, compete with purpose, and trust their training." },
 ];
 
-const caseStudies = [
-  { title: "Reimagining the Guest Experience", category: "Hospitality", description: "A complete digital transformation for a luxury hotel group, increasing direct bookings by 40%.", href: "/work" },
-  { title: "Scaling a Wellness Brand", category: "Health & Wellness", description: "Brand identity and e-commerce platform for a fast-growing wellness company entering new markets.", href: "/work" },
-  { title: "Modernizing Financial Services", category: "Fintech", description: "A customer-facing platform redesign that reduced support tickets by 60% and improved retention.", href: "/work" },
-  { title: "Launching a Destination Platform", category: "Tourism", description: "An immersive digital experience showcasing destinations, driving a 3x increase in engagement.", href: "/work" },
-];
-
-const processSteps = [
-  { number: "01", title: "Discovery", description: "We learn your business, audience, and goals through focused workshops and research." },
-  { number: "02", title: "Strategy", description: "We define the roadmap, positioning, and success metrics before a single pixel is designed." },
-  { number: "03", title: "Execution", description: "Design and development happen in tight cycles with your feedback built into every sprint." },
-  { number: "04", title: "Launch & Scale", description: "We launch with confidence, then optimize based on real performance data." },
-];
-
-const testimonials = [
-  { quote: "They didn't just build a website — they helped us rethink how we connect with our audience. The results speak for themselves.", author: "Sarah Chen", role: "CEO", company: "Vertex Health" },
-  { quote: "The level of craft and strategic thinking exceeded our expectations. We've seen a measurable impact on every key metric.", author: "Marcus Rivera", role: "VP Marketing", company: "Pinnacle Group" },
-  { quote: "Professional, responsive, and genuinely invested in our success. They feel like an extension of our team, not an outside vendor.", author: "Emily Thornton", role: "Founder", company: "Meridian Studio" },
+const pathway = [
+  {
+    number: "01",
+    title: "Join the Right Age Group",
+    description: "Parents share child age and experience so we can guide them into the right U4–U15 program track.",
+  },
+  {
+    number: "02",
+    title: "Train With Structure",
+    description: "Players develop technical quality, fitness habits, and tactical awareness through focused weekly sessions.",
+  },
+  {
+    number: "03",
+    title: "Compete Locally",
+    description: "Players apply what they learn in local matches, building confidence in real match conditions.",
+  },
+  {
+    number: "04",
+    title: "Progress to Travel Opportunities",
+    description: "Players who meet standards can be considered for travel-team pathways with higher competitive demands.",
+  },
 ];
 
 const faqItems = [
-  { question: "What industries do you work with?", answer: "We work across a range of industries including technology, hospitality, wellness, real estate, professional services, and more. Our approach adapts to the unique challenges of each sector." },
-  { question: "How long does a typical project take?", answer: "Most projects run between 8 and 16 weeks depending on scope. We'll provide a detailed timeline during our discovery phase so you know exactly what to expect." },
-  { question: "Do you offer ongoing support?", answer: "Yes. We offer retainer-based partnerships for ongoing design, development, and strategic support. Many of our clients work with us on a continuous basis." },
-  { question: "What does your pricing look like?", answer: "We scope and price each project based on its unique requirements. We're transparent about costs from the start and work with a range of budgets." },
-  { question: "Can you work with our existing team?", answer: "Absolutely. We frequently collaborate with in-house teams, complementing their strengths and filling gaps where needed." },
+  {
+    question: "My child is new to football. Can they still join?",
+    answer: "Yes. We place players by age and current level, then coach them with clear progression goals so they build confidence quickly.",
+  },
+  {
+    question: "Where does training take place?",
+    answer: "Kix Academy training currently runs at NSA Field and Winton Rugby Center in Nassau. Contact us for the latest weekly schedule by age group.",
+  },
+  {
+    question: "How does the travel-team pathway work?",
+    answer: "Travel opportunities are based on readiness, consistency, and coach assessment. Families receive clear expectations before any commitment.",
+  },
+  {
+    question: "What should parents expect from the coaching environment?",
+    answer: "Structured sessions, high standards, and direct communication. We coach players to improve skills, confidence, and team discipline over time.",
+  },
 ];
 
 export default function Home() {
   return (
     <PageLayout>
       <HeroSection
-        eyebrow="Strategy · Design · Results"
-        heading="We build digital experiences that move businesses forward."
-        description="A strategic partner for ambitious brands. We combine sharp strategy, exceptional design, and modern engineering to create digital products that perform."
-        primaryCta={{ label: "Start a Project", href: "/contact" }}
-        secondaryCta={{ label: "View Our Work", href: "/work" }}
+        eyebrow="Kix Academy · Nassau, Bahamas"
+        heading="Disciplined youth football training that parents trust."
+        description="From U4 to U15, we develop confident players through structured coaching, meaningful competition, and a clear pathway from training to match performance."
+        primaryCta={{ label: "Register Interest", href: "/contact" }}
+        secondaryCta={{ label: "View Programs", href: "/services" }}
       />
 
-      <TrustStrip />
+      <TrustStrip
+        label="Built for Nassau families"
+        brands={[
+          "U4–U15 Programs",
+          "Local Match Pathway",
+          "Travel Team Opportunities",
+          "NSA Field",
+          "Winton Rugby Center",
+        ]}
+      />
 
       <ServiceCardGrid
-        eyebrow="What We Do"
-        heading="End-to-end capabilities, one focused team."
-        description="We bring strategy, design, and technology together to solve complex problems and create lasting value."
-        services={services}
+        eyebrow="Programs"
+        heading="A clear training path for every stage of development."
+        description="Each age band has specific objectives so players improve with purpose, not guesswork."
+        services={programs}
       />
 
       <FeatureGrid
-        eyebrow="Why Us"
-        heading="The difference is in the details."
-        description="We're not the biggest agency, and that's by design. Here's what sets us apart."
-        features={features}
+        eyebrow="Development Focus"
+        heading="What we coach every week."
+        description="Our sessions are designed to build complete players on and off the pitch."
+        features={pillars}
         columns={4}
         variant="muted"
       />
 
-      <CaseStudyGrid
-        eyebrow="Selected Work"
-        heading="Results that speak louder than case studies."
-        description="A selection of recent projects across industries."
-        items={caseStudies}
-      />
-
       <ProcessSteps
-        eyebrow="Our Process"
-        heading="A proven approach, tailored every time."
-        description="Four phases. Clear milestones. No surprises."
-        steps={processSteps}
-      />
-
-      <TestimonialSection
-        eyebrow="Client Feedback"
-        heading="What our partners say."
-        testimonials={testimonials}
+        eyebrow="Pathway"
+        heading="From first session to higher competition."
+        description="Parents get a clear view of how progression works at Kix Academy."
+        steps={pathway}
       />
 
       <FAQSection
-        eyebrow="FAQ"
-        heading="Common questions, straight answers."
+        eyebrow="Parent FAQ"
+        heading="Straight answers before you commit."
+        description="Everything you need to evaluate fit, expectations, and next steps."
         items={faqItems}
       />
 
       <CTABlock
-        heading="Ready to start something great?"
-        description="Let's talk about your next project and how we can help bring it to life."
-        primaryCta={{ label: "Get in Touch", href: "/contact" }}
-        secondaryCta={{ label: "View Our Work", href: "/work" }}
+        heading="Ready to find the right program for your child?"
+        description="Tell us your child’s age group and preferred location. We’ll guide you to the best next step."
+        primaryCta={{ label: "Start Registration", href: "/contact" }}
+        secondaryCta={{ label: "See Match Pathway", href: "/work" }}
         variant="dark"
       />
     </PageLayout>

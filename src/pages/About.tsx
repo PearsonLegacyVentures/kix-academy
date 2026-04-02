@@ -4,56 +4,76 @@ import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/blocks/SectionHeading";
 import { StatsRow } from "@/components/blocks/StatsRow";
 import { CTABlock } from "@/components/blocks/CTABlock";
-import { Heart, Eye, Target, Users } from "lucide-react";
+import { ClipboardCheck, HeartHandshake, Goal, MessageSquareHeart } from "lucide-react";
 
-const values = [
-  { icon: Eye, title: "Clarity Over Complexity", description: "We cut through noise to deliver solutions that are elegant, focused, and easy to understand." },
-  { icon: Heart, title: "Craft Matters", description: "Every detail is intentional. From typography to performance, we hold ourselves to a higher standard." },
-  { icon: Target, title: "Outcomes First", description: "We measure our work by the impact it creates — not the hours we log or the deliverables we produce." },
-  { icon: Users, title: "True Partnership", description: "We work alongside your team, not above it. Collaboration, transparency, and trust drive everything we do." },
+const standards = [
+  {
+    icon: ClipboardCheck,
+    title: "Structured Sessions",
+    description:
+      "Every session has a clear objective so players and parents understand what progress looks like week to week.",
+  },
+  {
+    icon: Goal,
+    title: "Development Before Hype",
+    description:
+      "We prioritize technical quality, confidence, and decision-making over short-term noise or empty promises.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Respect & Discipline",
+    description:
+      "Players are coached to compete with intensity while respecting teammates, coaches, officials, and opponents.",
+  },
+  {
+    icon: MessageSquareHeart,
+    title: "Parent Clarity",
+    description:
+      "Families get direct communication about expectations, progression, and the best pathway for their child.",
+  },
 ];
 
-const stats = [
-  { value: "10+", label: "Years of experience" },
-  { value: "200+", label: "Projects delivered" },
-  { value: "50+", label: "Clients worldwide" },
-  { value: "98%", label: "Client satisfaction" },
+const framework = [
+  { value: "U4–U6", label: "Foundation stage" },
+  { value: "U7–U10", label: "Development stage" },
+  { value: "U11–U15", label: "Competitive stage" },
+  { value: "Nassau", label: "Training locations" },
 ];
 
 export default function About() {
   return (
     <PageLayout>
       <HeroSection
-        eyebrow="About Us"
-        heading="Built on craft, driven by outcomes."
-        description="We're a team of strategists, designers, and engineers who believe great digital work should be both beautiful and commercially effective."
+        eyebrow="Academy"
+        heading="A disciplined coaching culture built for long-term growth."
+        description="Kix Academy is built around structure, accountability, and confidence. We help players improve with purpose while giving parents a clear, trusted development path."
         variant="centered"
       />
 
       <Section>
         <div className="mx-auto max-w-3xl">
           <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-            Founded on the principle that digital experiences should earn attention — not demand it — we've spent the last decade helping brands across industries transform how they connect with their audiences.
+            Families choose Kix Academy because the environment is serious, positive, and clear. Players are challenged at the right level and coached with consistent standards.
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-            We're intentionally small, which means every client gets senior-level attention from day one. No account managers relaying messages. No junior teams learning on your project. The people you meet are the people who do the work.
+            We focus on how players train, think, compete, and carry themselves. That means technical detail, game understanding, and character are developed together.
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Our approach blends strategic thinking with exceptional execution. We don't just make things look good — we make sure they work, perform, and deliver measurable results.
+            Our role is simple: help each player become more confident, more disciplined, and more prepared for the demands of higher competition.
           </p>
         </div>
       </Section>
 
-      <StatsRow stats={stats} />
+      <StatsRow stats={framework} />
 
       <Section>
         <SectionHeading
-          eyebrow="Our Values"
-          heading="Principles that guide every decision."
-          description="These aren't just words on a wall. They shape how we work, who we hire, and how we show up for our clients."
+          eyebrow="Coaching Standards"
+          heading="What parents can expect from day one."
+          description="These standards shape every training block, match day, and player conversation."
         />
         <div className="grid gap-8 md:grid-cols-2">
-          {values.map((value) => (
+          {standards.map((value) => (
             <div key={value.title} className="rounded-xl border border-border bg-card p-6 md:p-8">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-muted text-foreground">
                 <value.icon className="h-5 w-5" />
@@ -65,31 +85,10 @@ export default function About() {
         </div>
       </Section>
 
-      <Section variant="muted">
-        <SectionHeading
-          eyebrow="The Team"
-          heading="Senior talent, hands-on approach."
-          description="A small, focused team where every member brings deep expertise and genuine care."
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {["Alex Morgan", "Jordan Lee", "Sam Patel", "Riley Brooks"].map((name, i) => (
-            <div key={i} className="text-center">
-              <div className="mx-auto mb-4 h-32 w-32 rounded-full bg-muted flex items-center justify-center text-2xl font-semibold text-muted-foreground">
-                {name.charAt(0)}
-              </div>
-              <h3 className="text-base font-semibold">{name}</h3>
-              <p className="text-sm text-muted-foreground">
-                {["Founder & Strategist", "Design Lead", "Engineering Lead", "Project Director"][i]}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
       <CTABlock
-        heading="Want to work with us?"
-        description="We're always interested in hearing about new projects and challenges."
-        primaryCta={{ label: "Start a Conversation", href: "/contact" }}
+        heading="Want to see where your child fits?"
+        description="Share your child’s age and experience. We’ll guide you to the most suitable training group."
+        primaryCta={{ label: "Register Interest", href: "/contact" }}
       />
     </PageLayout>
   );
